@@ -139,4 +139,31 @@ const checkIsPrimeNumber = (number) => {
   }
   console.log("its prime number");
 };
-checkIsPrimeNumber(8);
+// checkIsPrimeNumber(8);
+
+// 7. Write a program to check whether number is perfect number or not ?
+// Prime Number: whose SUM of all factors equal to value expect value itself factor.
+
+/*
+ A perfect number is a positive integer whose sum of its proper divisors is equal to one.
+*/
+
+const checkIsPerfectNumber = (num) => {
+  let _temp = Math.floor(num / 2);
+  if (num < 0) {
+    console.log("Invalid number ");
+    return;
+  }
+  let i = 1;
+  let perfectNumber = 0;
+  while (i <= _temp) {
+    if (num % i == 0) {
+      perfectNumber += i;
+    }
+    i++;
+  }
+  perfectNumber == num
+    ? console.log(num, "is Perfect number")
+    : console.log("is Not Perfect number");
+};
+checkIsPerfectNumber(27);
