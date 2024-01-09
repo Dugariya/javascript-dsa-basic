@@ -166,4 +166,32 @@ const checkIsPerfectNumber = (num) => {
     ? console.log(num, "is Perfect number")
     : console.log("is Not Perfect number");
 };
-checkIsPerfectNumber(27);
+// checkIsPerfectNumber(27);
+
+// 8. Write a program to find duplicate numbers in an integer array ?
+
+// const findDuplicateNumberInArray = (arr) => {
+//   let duplicateArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = arr[i];
+//     for (let j = i + 1; j < arr.length; j++) {
+//       if (element == arr[j]) {
+//         !duplicateArr.includes(element) && duplicateArr.push(element);
+//       }
+//     }
+//   }
+//   console.log(duplicateArr);
+// };
+const findDuplicateNumberInArray = (arr) => {
+  let duplicateArr = [];
+  let uniqueArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!uniqueArr.includes(arr[i])) {
+      uniqueArr.push(arr[i]);
+    } else {
+      !duplicateArr.includes(arr[i]) && duplicateArr.push(arr[i]);
+    }
+  }
+  console.log(duplicateArr, uniqueArr);
+};
+findDuplicateNumberInArray([1, 2, 3, 4, 4, 5]);

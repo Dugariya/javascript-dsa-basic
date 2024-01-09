@@ -8,3 +8,5 @@ I have solved some basic DSA questions related to JavaScript. These include:
 4. Writing a program to count the total number of vowels in a given string.
 5. Writing a program to print the factorial of any given number.
 6. Write a program for check number is prime or not ?
+7. Write a program to check whether number is perfect number or not ?
+8. Write a program to find duplicate numbers in an integer array ?
