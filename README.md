@@ -1,15 +1,9 @@
 # javascript-dsa-basic
 
-# javascript-dsa-basic
+I have solved some basic DSA questions related to JavaScript. These include: 
 
-# I have solve the some basic DSA question
-
-# Like 1. Custom sorting program in JS via Bubble Sort ?
-
-# 2. Write a program to check if a string or word or number is palindrome ?
-
-# Write a program to check if value/target exists or not in ascending array in O(log n) time complexity ?
-
-# 4. Write a program to get total vowel count from String ?
-
-# 5. Write a program to prints factorial of any number ?
+1. Creating a custom sorting program in JS using Bubble Sort. 
+2. Writing a program to check whether a given string, word, or number is a palindrome. 
+3. Writing a program to check whether a value/target exists in an ascending array in O(log n) time complexity. 
+4. Writing a program to count the total number of vowels in a given string. 
+5. Writing a program to print the factorial of any given number.
