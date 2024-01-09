@@ -206,4 +206,34 @@ const removDuplicatesFromArray = (arr) => {
   }
   console.log(uniqueArr);
 };
-removDuplicatesFromArray([1, 2, 3, 4, 4, 5]);
+// removDuplicatesFromArray([1, 2, 3, 4, 4, 5]);
+
+// Q: Write a program, Selena wants to save money for his first car. She puts money in the ABC bank every day. She starts by putting in $1 on Monday, the first day. Every day from Tuesday to Sunday, she will put in $1 more than the day before. On every subsequent Monday, she will put in $1 more than the previous Monday. Given n, return the total amount of money Selena will have in the ABC bank at the end of the nth day.
+
+// const totalAmount = (num) => {
+//   let totalAmount = 0;
+//   for (let i = 1; i <= num; i++) {
+//     let remender = i % 7 == 0 ? 0 : 1;
+//     let totalMonday = Math.floor(i / 7) + remender;
+//     let day = i % 7 == 0 ? 7 : i % 7;
+//     totalAmount += day + totalMonday - 1;
+//   }
+//   console.log(totalAmount, "total amount...");
+// };
+// totalAmount(12);
+
+const totalAmount = (num) => {
+  let totalAmount = 0;
+  for (let i = 1; i <= num; i++) {
+    let remainder = i % 7;
+    console.log(Math.floor(i / 7) + 1, remainder, "remainder");
+    if (remainder === 1) {
+      totalAmount += Math.floor(i / 7) + 1;
+    } else {
+      totalAmount += remainder;
+    }
+  }
+  console.log(totalAmount, "total amount...");
+};
+
+totalAmount(12);
