@@ -119,3 +119,24 @@ const factorialNumbers = (num) => {
 //https://www.linkedin.com/pulse/javascript-most-commonly-asked-data-structure-questions-sanjay-kumar
 
 // 6. Write a program for check number is prime or not ?
+/*
+A prime number is a number that has only two factors, that is, 1 and the number itself.
+means its divide only 1 and itself
+to solve this problem  1,  we check the number is greater than 0
+2. check the number is not divide half of the lowest number 
+2 s3 5 
+*/
+const checkIsPrimeNumber = (number) => {
+  if (number <= 0) return;
+  let _tempNum = Math.floor(number / 2);
+  let i = 2;
+  while (i <= _tempNum) {
+    if (number % i == 0) {
+      console.log("not prime number");
+      return;
+    }
+    i++;
+  }
+  console.log("its prime number");
+};
+checkIsPrimeNumber(8);
