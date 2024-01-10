@@ -286,4 +286,56 @@ const countOccurences = (str) => {
   }
   console.log(JSON.stringify(occurrences));
 };
-countOccurences("Just Looking Like a Wow");
+// countOccurences("Just Looking Like a Wow");
+
+// . Write a function that reverses the order of words in a sentence without using the built-in reverse() method.
+// hello how are you =>  olleh woh ere uoy
+
+const reverseOrder = (str) => {
+  console.log(str.split(" ").reverse().join(" "));
+};
+// reverseOrder("hello how are you");
+
+// callback function
+// a callback funtion is function that is pass to another funtion as a argument that call after some operation has been completed
+
+const callbackExample = (arr, callback) => {
+  console.log(arr, "enter");
+  arr.push(100);
+  callback();
+};
+const arr = [1, 2, 3];
+// callbackExample(arr, () => {
+//   console.log(arr, "callbacke funtion call");
+// });
+
+const reverseBySeperator = () => {
+  let str = "welcome to the new era";
+  console.log(str.split(" ").reverse().join(" "));
+};
+// reverseBySeperator();
+
+// how would we check the number is a integer
+const checkNumberIsInt = (num) => {
+  console.log(num % 1);
+  num % 1 === 0 ? console.log("Is Integer") : console.log("Is Decimal");
+};
+// checkNumberIsInt(13);
+// 23456-8
+const addDashHandler = (number) => {
+  let _tempNum = number;
+  let result = "";
+  while (_tempNum > 0) {
+    let remender = _tempNum % 10;
+    _tempNum = Math.floor(_tempNum / 10);
+
+    if (remender % 2 == 0 && (_tempNum % 10) % 2 == 0) {
+      result = `-${remender}${result}`;
+    } else {
+      result = `${remender}${result}`;
+    }
+  }
+  console.log(result);
+  return result;
+};
+addDashHandler(25468);
