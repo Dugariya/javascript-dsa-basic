@@ -11,3 +11,5 @@ I have solved some basic DSA questions related to JavaScript. These include:
 7. Write a program to check whether number is perfect number or not ?
 8. Write a program to find duplicate numbers in an integer array ?
 9. How do you remove duplicates from an integer array ?
+10. Implement a function that takes two sorted arrays and merges them into a single sorted array without using any built-in sorting functions. ?
+11. Create a JavaScript function that returns the Fibonacci sequence up to a given number, utilizing memoization for optimized performance.

@@ -236,4 +236,54 @@ const totalAmount = (num) => {
   console.log(totalAmount, "total amount...");
 };
 
-totalAmount(12);
+// totalAmount(12);
+// 0 1 1 2 3 5 8 13 ... this is fibonaci
+// Write a recursive function to calculate the factorial of a given number.
+const factorialNumberCalculatUsingRecursive = (num) => {
+  if (num < 1) return 1;
+  return num * factorialNumberCalculatUsingRecursive(num - 1);
+};
+// console.log(factorialNumberCalculatUsingRecursive(3));
+
+// 10 Implement a function that takes two sorted arrays and merges them into a single sorted array without using any built-in sorting functions. ?
+
+const mergeArray = (arr1, arr2) => {
+  return [...arr1, ...arr2].sort();
+};
+// console.log(mergeArray([1, 4, 5], [1, 2, 3]));in
+// reverse string
+const reverseString = (str) => {
+  return str.split("").reverse().join("");
+};
+// console.log(reverseString("dugariya"));
+const checkIsAnagram = (str1, str2) => {
+  if (str1.length != str2.length) {
+    console.log("invalid anagram string");
+    return;
+  }
+  console.log(str1.split("").sort().join("") == str2.split("").sort().join(""));
+};
+// checkIsAnagram("heart", "earthd");
+
+// 11. Create a JavaScript function that returns the Fibonacci sequence up to a given number, utilizing memoization for optimized performance.
+
+const memorizeFibonacci = (num) => {
+  let memo = [0, 1];
+  console.log(memo);
+  for (let i = 2; i < num; i++) {
+    memo.push(memo[memo.length - 1] + memo[memo.length - 2]);
+  }
+  console.log(memo);
+};
+// memorizeFibonacci(3);
+
+// Given a string, write a function to count the occurrences of each character in the string.
+const countOccurences = (str) => {
+  str = str.toLowerCase();
+  let occurrences = {};
+  for (let char of str) {
+    occurrences[char] = occurrences[char] ? occurrences[char] + 1 : 1;
+  }
+  console.log(JSON.stringify(occurrences));
+};
+countOccurences("Just Looking Like a Wow");
